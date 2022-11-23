@@ -1,6 +1,7 @@
 import './App.css';
 import React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.css'
 import EntryIndex from './Components/EntryIndex'
 import EntryCreate from './Components/EntryCreate'
 import EntryEdit from './Components/EntryEdit'
