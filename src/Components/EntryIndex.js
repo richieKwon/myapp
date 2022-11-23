@@ -8,10 +8,10 @@ export default function EntryIndex(props) {
     useEffect(() => { displayData() }, []);
     const navigate = useNavigate()
 
-    function navigateToCreate() {
-        const { history } = props
-        history.push('entries/create')
-    }
+    // function navigateToCreate() {
+    //     const { history } = props
+    //     history.push('entries/create')
+    // }
 
     async function displayData() {
         const response = await axios.get("https://localhost:5001/api/entries")
@@ -22,16 +22,10 @@ export default function EntryIndex(props) {
 
     return (
         <>
-            <h1>Article List</h1>
+            <h1>Article List
+                <button className="btn btn-sm btn-default" onClick={() => navigate(`/create`)}>Create</button>
+            </h1>
 
-            {/* {status.entries.map((data, i) => <ul key={i}>
-                <li>
-                    {data.id}
-                    {data.title}
-                    {data.content}
-                    {data.created}
-                </li>
-            </ul>)} */}
             <table className="table table-striped" aria-labelledby="tableLabel">
                 <thead>
                     <tr>
