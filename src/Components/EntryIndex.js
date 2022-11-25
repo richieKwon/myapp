@@ -23,7 +23,7 @@ export default function EntryIndex(props) {
     return (
         <>
             <h1>Article List
-                <button className="btn btn-sm btn-default" onClick={() => navigate(`/create`)}>Create</button>
+                <button className="btn btn-sm btn-default" onClick={() => navigate('/create')}>+</button>
             </h1>
 
             <table className="table table-striped" aria-labelledby="tableLabel">
