@@ -20,6 +20,28 @@ export default function EntryIndex(props) {
         setStatus({ entries: data, loading: false })
     }
 
+    // function deleteDirectBy(id) {
+    //     if (window.confirm("Delete?")) {
+    //         fetch("https://localhost:5001/api/entries/" + id, {
+    //             method: "DELETE",
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //                 'Access-Control-Allow-origin': '*',
+    //                 "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+    //             }
+    //         }).then(res => {
+    //             if (res.ok) {
+    //                 setStatus({
+    //                     entries: status.entries.filter
+    //                         ((book) => { return book.id != id })
+    //                 });
+    //                 alert("A new book is deleted");
+    //                 navigate(`/`);
+    //             }
+    //         })
+    //     }
+    // }
+
     return (
         <>
             <h1>Article List
@@ -46,6 +68,8 @@ export default function EntryIndex(props) {
                             <td >{data.content}</td>
                             <td >{new Date(data.created).toLocaleDateString()}</td>
                             <td className="text-nowrap">
+                                <button className="btn btn-sm btn-secondary" onClick={() => navigate(`/details/${data.id}`)}>Details</button> &nbsp;
+                                &nbsp;
                                 <button className="btn btn-sm btn-primary" onClick={() => navigate(`/edit/${data.id}`)}>Edit</button> &nbsp;
                                 &nbsp;
                                 <button className="btn btn-sm btn-danger" onClick={() => navigate(`/delete/${data.id}`)}>Delete</button>
