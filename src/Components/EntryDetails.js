@@ -16,9 +16,9 @@ export default function EntryDetails(props) {
     const params = useParams().id;
     const fetchURL = "https://localhost:5001/api/entries/" + params
 
-    useEffect((params) => { displayById(params) }, []);
+    useEffect(() => { displayById() }, []);
 
-    function displayById(params) {
+    function displayById() {
         fetch(fetchURL, { method: "GET" })
             .then((response) => { return response.json() })
             // .then((data) => console.log(data));
@@ -34,7 +34,23 @@ export default function EntryDetails(props) {
 
     };
 
-
+    function deleteBookById() {
+        if (window.confirm("Delete?")) {
+            fetch(fetchURL, {
+                method: "DELETE"
+                // headers: {
+                //     'Content-Type': 'application/json',
+                //     'Access-Control-Allow-origin': '*',
+                //     "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+                // }
+            }).then(res => {
+                if (res.ok) {
+                    alert("A new book is deleted");
+                    navigate(`/`);
+                }
+            })
+        }
+    }
     return (
         <>
             <h3>EntryDetails</h3>
@@ -65,7 +81,7 @@ export default function EntryDetails(props) {
                     <div className="form-group">
                         <button type="submit" className="btn btn-primary">Edit</button>
                         &nbsp;
-                        <button type="submit" className="btn btn-primary">Delete</button>
+                        <button className="btn btn-danger" onClick={() => { deleteBookById() }}>Delete</button>
                         &nbsp;
                         <button className="btn btn-secondary" onClick={() => navigate(`/`)}>Back to List</button>
                     </div>
