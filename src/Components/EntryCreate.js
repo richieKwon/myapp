@@ -67,7 +67,7 @@ export default function EntryCreate(props) {
         <>
             <h3>Create your book</h3>
             <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-8 offset-md-2">
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label style={{ display: "flex", flexDirection: "row", paddingLeft: 12 }}>Name</label>
@@ -86,7 +86,7 @@ export default function EntryCreate(props) {
                             </textarea>
                         </div>
                         <div className="form-group">
-                            <button type="submit" className="btn btn-primary">Submit</button>
+                            <button type="submit" className="btn btn-success">Submit</button>
                             &nbsp;
                             <button className="btn btn-secondary" onClick={() => navigate(`/`)}>Back to List</button>
                         </div>

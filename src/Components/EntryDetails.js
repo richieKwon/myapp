@@ -55,27 +55,27 @@ export default function EntryDetails(props) {
         <>
             <h3>EntryDetails</h3>
             <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-8 offset-md-2">
 
                     <div className="form-group">
                         <label style={{ display: "flex", flexDirection: "row", paddingLeft: 12 }}>ID</label>
                         <input type="text" className="form-control" value={status.id}
-                            style={{ margin: 10 }} name="name"></input>
+                            style={{ margin: 10 }} name="name" readOnly></input>
                     </div>
                     <div className="form-group">
                         <label style={{ display: "flex", flexDirection: "row", paddingLeft: 12 }}>Name</label>
                         <input type="text" className="form-control" value={status.name}
-                            style={{ margin: 10 }} name="name"></input>
+                            style={{ margin: 10 }} name="name" readOnly></input>
                     </div>
                     <div className="form-group">
                         <label style={{ display: "flex", flexDirection: "row", paddingLeft: 12 }}>Title</label>
                         <input type="text" className="form-control" value={status.title}
-                            style={{ margin: 10 }} name="title"></input>
+                            style={{ margin: 10 }} name="title" readOnly></input>
                     </div>
                     <div className="form-group">
                         <label style={{ display: "flex", flexDirection: "row", paddingLeft: 12 }}>Content</label>
                         <textarea className="form-control" value={status.content}
-                            style={{ margin: 10 }} rows="10">
+                            style={{ margin: 10 }} rows="10" readOnly>
                         </textarea>
                     </div>
                     <div className="form-group">

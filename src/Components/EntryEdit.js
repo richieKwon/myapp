@@ -82,7 +82,7 @@ export default function EntryEdit(props) {
         <>
             <h3>Edit - Book List</h3>
             <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-8 offset-md-2">
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label style={{ display: "flex", flexDirection: "row", paddingLeft: 12 }}>Name</label>
