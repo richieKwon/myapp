@@ -79,7 +79,7 @@ export default function EntryDetails(props) {
                         </textarea>
                     </div>
                     <div className="form-group">
-                        <button type="submit" className="btn btn-primary">Edit</button>
+                        <button type="submit" className="btn btn-primary" onClick={() => navigate(`/edit/${params}`)}>Edit</button>
                         &nbsp;
                         <button className="btn btn-danger" onClick={() => { deleteBookById() }}>Delete</button>
                         &nbsp;
