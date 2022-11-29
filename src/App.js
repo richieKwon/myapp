@@ -7,6 +7,7 @@ import EntryCreate from './Components/EntryCreate'
 import EntryEdit from './Components/EntryEdit'
 import EntryDelete from './Components/EntryDelete'
 import EntryDetails from './Components/EntryDetails'
+import PagerComponent from './Components/Pager/PagerComponent';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path='/edit/:id' element={<EntryEdit />} />
             <Route path='/details/:id' element={<EntryDetails />} />
             <Route path='/delete/:id' element={<EntryDelete />} />
+            <Route path='/pager' element={<PagerComponent />} />
           </Routes>
         </div >
       </BrowserRouter>
